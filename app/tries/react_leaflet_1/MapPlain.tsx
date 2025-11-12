@@ -9,7 +9,8 @@ import MapMarkersCluster from "./MarkerCluster";
 
 // Fix default marker icons in TypeScript
 const DefaultIcon = L.icon({
-  iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+  iconRetinaUrl:
+    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
   iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
   shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
   iconSize: [25, 41],
@@ -20,11 +21,8 @@ const DefaultIcon = L.icon({
 
 L.Marker.prototype.options.icon = DefaultIcon;
 
-
-
-
 function SetMap() {
-  const { setMap} = useMapContext();
+  const { setMap } = useMapContext();
 
   const map = useMap();
   useEffect(() => {
@@ -34,54 +32,23 @@ function SetMap() {
 }
 
 export default function MapComponent() {
- 
-
-
-
-  
-
   return (
     <MapContainer
       center={[40.4168, -3.7038]}
       zoom={5}
-      style={{ height: "500px", width: "100%" }}
-      
+      style={{ height: "100%", width: "100%" }}
     >
-      <SetMap/>
+      <SetMap />
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution="&copy; OpenStreetMap contributors"
-      
       />
       {/* {locationSearch.map((loc, i) => (
         <Marker key={i} position={[loc.lat, loc.lng]}>
           <Popup>{loc.name}</Popup>
         </Marker>
       ))} */}
-       <MapMarkersCluster />
+      <MapMarkersCluster />
     </MapContainer>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

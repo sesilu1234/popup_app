@@ -8,17 +8,13 @@ import dynamic from "next/dynamic";
 
 const MapRender = dynamic(() => import("./MapPlain"), { ssr: false });
 
-
 export default function Home() {
   return (
     <MapProvider>
-      <div className="flex flex-col items-center justify-center w-full h-screen">
-        <div className="flex items-center justify-center">
-          <PlacesSearch />
+      <div className="flex flex-col items-center justify-center w-full h-screen gap-12">
+        <PlacesSearch />
 
-         
-        </div>
-        <div className="w-[1100px] h-90 max-w-8/10  mt-20">
+        <div className="w-[900px] max-w-[80%] h-[360px] mx-auto rounded-xl overflow-visible bg-gray-100 shadow-2xl">
           <MapRender />
         </div>
       </div>
