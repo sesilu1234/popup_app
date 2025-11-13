@@ -6,22 +6,18 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from '@/components/ui/card';
 
+import { Button } from '@/components/ui/button';
 
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 
-import { Button } from "@/components/ui/button"
-
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-
-
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function JamCard({ jamName, spotName, address, time, tags, src }) {
   return (
     <Card className="flex flex-col md:flex-row w-full max-w-md md:max-w-lg shadow-md rounded-xl overflow-hidden">
-      
       {/* Image left (desktop) / top (mobile) */}
       <div className="relative w-full md:w-36 md:h-auto flex-shrink-0">
         {src && (
@@ -54,31 +50,21 @@ export default function JamCard({ jamName, spotName, address, time, tags, src })
   );
 }
 
-
-
-
-
 export function CardDemo_1() {
   return (
     <Card className="max-w-sm">
       <CardHeader>
         <CardTitle className="text-xs">Login to your account</CardTitle>
-        <CardDescription  className="text-xs">
+        <CardDescription className="text-xs">
           Enter your email below to login to your account
         </CardDescription>
-       
       </CardHeader>
       <CardContent>
         <form>
           <div className="flex flex-col gap-6">
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="m@example.com"
-                required
-              />
+              <Input id="email" type="email" placeholder="m@example.com" required />
             </div>
             <div className="grid gap-2">
               <div className="flex items-center">
@@ -104,5 +90,5 @@ export function CardDemo_1() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

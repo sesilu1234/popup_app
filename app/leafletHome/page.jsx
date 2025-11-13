@@ -4,9 +4,7 @@ import React from 'react';
 import { MapProvider } from './MapContext';
 
 import dynamic from 'next/dynamic';
-import GooglePlacesSearch from './GooglePlacesSearch'
-
-
+import GooglePlacesSearch from './GooglePlacesSearch';
 
 const MapRender = dynamic(() => import('./MapRender'), { ssr: false });
 
@@ -14,12 +12,9 @@ export default function Home() {
   return (
     <MapProvider>
       <div className="flex flex-col items-center justify-center w-full h-screen gap-6">
-        
         <div className="w-[900px] max-w-[80%] mx-auto ">
-         
-
-         <div className='w-48' >
-          <GooglePlacesSearch/>
+          <div className="w-48">
+            <GooglePlacesSearch />
           </div>
         </div>
 
