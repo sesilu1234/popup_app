@@ -57,8 +57,8 @@ const PlaceAutocomplete = () => {
   return (
     <input
       ref={inputRef}
-      placeholder="Search a place..."
-      className="w-full h-8 px-3 text-sm text-gray-500 placeholder-gray-500 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="2337 NW 5th Ave, Miami, FL. "
+      className="w-full h-12 px-3 text-sm text-gray-500 placeholder-gray-500 bg-gray-500/20 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
     />
   );
 };

@@ -49,7 +49,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: oklch(67.64% 0.00008 271.152 / 0.3);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -125,23 +125,22 @@
   }
 }
 
-
 /* Para Chrome, Edge, Safari */
 .card-container::-webkit-scrollbar {
-  width: 6px;               /* grosor */
+  width: 6px; /* grosor */
 }
 
 .card-container::-webkit-scrollbar-track {
-  background: transparent;   /* fondo del track */
+  background: transparent; /* fondo del track */
 }
 
 .card-container::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0.3); /* color del thumb */
-  border-radius: 3px;                 /* esquinas redondeadas */
+  background-color: rgba(0, 0, 0, 0.3); /* color del thumb */
+  border-radius: 3px; /* esquinas redondeadas */
 }
 
 /* Para Firefox */
 .card-container {
   scrollbar-width: thin;
-  scrollbar-color: rgba(0,0,0,0.3) transparent;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }
