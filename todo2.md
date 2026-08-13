@@ -37,3 +37,8 @@ https://business.google.com/en-all/business-profile/
 
 otros threads de reddit 
 
+
+
+
+
+añadir new york , seattle, LA, tokyo, seul, hong kong, singapur, taipei
