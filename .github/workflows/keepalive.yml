@@ -1,0 +1,14 @@
+name: Keepalive Workflow
+
+on:
+  schedule:
+    - cron: '0 0 1 * *' # Se ejecuta automáticamente el día 1 de cada mes
+
+jobs:
+  cronjobautomator:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Permiso necesario para actualizar el repositorio si hiciera falta
+    steps:
+      - uses: actions/checkout@v4
+      - uses: gautamkrishnar/keepalive-workflow@v2
