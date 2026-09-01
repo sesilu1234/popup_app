@@ -1,14 +1,25 @@
-name: Keepalive Workflow
+name: Keepalive Manual
 
 on:
   schedule:
-    - cron: '0 0 1 * *' # Se ejecuta automáticamente el día 1 de cada mes
+    - cron: '0 0 1 * *' # El día 1 de cada mes
 
 jobs:
-  cronjobautomator:
+  keepalive:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Permiso necesario para actualizar el repositorio si hiciera falta
+      contents: write
     steps:
       - uses: actions/checkout@v4
-      - uses: gautamkrishnar/keepalive-workflow@v2
+      
+      - name: Make a dummy commit to reset GitHub 60-day timer
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          
+          # Escribe el timestamp actual en un fichero
+          date > .github/keepalive.txt
+          
+          git add .github/keepalive.txt
+          git commit -m "chore: keepalive cron trigger"
+          git push
