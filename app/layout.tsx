@@ -7,6 +7,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route"; // P
 import Script from 'next/script';
 import CookieConsent from './cookieToaster';
 import { Toaster } from '@/components/ui/sonner';
+import { Analytics } from '@vercel/analytics/next';
 
 // ADD THIS BLOCK
 export const metadata: Metadata = {
@@ -67,6 +68,7 @@ export default async function RootLayout({
           <CookieConsent/>
           <Toaster/>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
